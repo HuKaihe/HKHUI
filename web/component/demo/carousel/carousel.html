@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HKHUI轮播图</title>
+    <link rel="stylesheet" href="../../static/HKHUI.css">
+    <script src="../../static/jquery-1.12.0.min.js"></script>
+</head>
+<body>
+<div class="hu-container">
+    <!--hu-carousel的大小默认和它容器的大小一致，所以必须要为父容器定义一个适当的高度和宽度-->
+    <div style="height: 500px;">
+        <div class="hu-carousel">
+            <ul class="hu-scroll-picture-list">
+                <li><img src="scroll-pic1.png"/></li>
+                <li><img src="scroll-pic2.png"/></li>
+                <li><img src="scroll-pic3.png"/></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="../../static/HKHUI.js"></script>
+<script>
+    $(".hu-carousel").carousel({time:4000,fadeTime:1000});
+</script>
+</body>
+</html>
