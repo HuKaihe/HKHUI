@@ -17,7 +17,6 @@ ul{
     overflow: hidden;
     width: 225px;
     height: 160px;
-    background-color: #FFFFFF;
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.1);
     cursor: pointer;
 }
@@ -43,6 +42,9 @@ ul{
     background-color: #FFFFFF;
     color: #07111b;
 }
+.hu-box-bg-deep .hu-box-name{
+    color: #fff;
+}
 .hu-box .hu-box-hover-cover {
     position: absolute;
     top: 160px;
@@ -58,6 +60,9 @@ ul{
 .hu-box .hu-box-hover-cover p {
     font-size: 14px;
     color: #07111b;
+}
+.hu-box-bg-deep .hu-box-hover-cover p{
+    color: #fff;
 }
 .hu-box .animate-show-hover-cover {
     animation: show-hover-cover 0.5s forwards;
@@ -215,3 +220,4 @@ ul{
     background-color: #70DDD7;
     color: #fbf1ea;
 }
+
