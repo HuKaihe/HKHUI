@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="Blog/css/reset.css">
+    <link rel="stylesheet" href="Blog/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Blog/css/blog1.css">
+    <script src="Blog/jquery-1.12.0.min.js"></script>
+    <script src="processBar.js"></script>
+    <link rel="stylesheet" href="processBar.css">
+</head>
+<body>
+<div class="hu-process-bar"></div>
+<header class="header">
+    <span class="fa fa-twitter icon"></span>
+</header>
+<script>
+    progress(0.1)
+</script>
+<div class="top-block">
+    <img src="Blog/images/master.jpg"/>
+    <img src="Blog/images/banner.jpg"/>
+</div>
+<script>
+    progress(0.2)
+</script>
+<div class="main">
+    <nav class="menu">
+        <ul class="sidebar">
+            <li class="active"><a href="#">Web front end</a></li>
+            <li><a href="#">Web background</a></li>
+            <li><a href="#">Android</a></li>
+            <li><a href="#">IOS</a></li>
+            <li><a href="#">Linux</a></li>
+            <li><a href="#">Operating System</a></li>
+            <li><a href="#">PhotoShop</a></li>
+        </ul>
+    </nav>
+    <div class="primary">
+        <ul class="intro">
+            <li><span class="fa fa-search icon"></span></li>
+            <li><span>25</span>blogs</li>
+            <li><span>2500</span>visitors</li>
+            <li><span>25</span>commits</li>
+            <li><span>25</span>favourite</li>
+            <li class="bottom-line"></li>
+        </ul>
+        <script>
+            progress(0.5)
+        </script>
+        <ul class="blog-pic-list">
+            <li><a href="#"><img src="Blog/images/Israel.jpg"/></a></li>
+            <li><a href="#"><img src="Blog/images/sea.jpg"/></a></li>
+            <li><a href="#"><img src="Blog/images/church.jpg"/></a></li>
+        </ul>
+
+        <section class="blog-section">
+            <ul class="blog-list">
+                <li>
+                    <header class="blog-title">《Javascript语言精粹》读后感</header>
+                    <article class="blog-content">
+                        JavaScript语言精粹是大师之作，其中蕴含了作者老道对JS精华、毒瘤和糟粕的独到理解
+                    </article>
+                    <footer class="blog-interaction">
+                        50个赞 &nbsp;&nbsp;&nbsp;&nbsp;<span class="fa fa-thumbs-o-up icon"></span>
+                    </footer>
+                </li>
+                <li>
+                    <header class="blog-title">《Javascript启示录》读后感</header>
+                    <article class="blog-content">
+                        JS启示录不关注所谓毒瘤与糟粕，作者更擅长的是对比各种实现功能的方式并从中提炼出通用的解决问题的方式
+                    </article>
+                    <footer class="blog-interaction">
+                        25个赞 &nbsp;&nbsp;&nbsp;&nbsp;<span class="fa fa-thumbs-o-up icon"></span>
+                    </footer>
+                </li>
+                <li>
+                    <header class="blog-title">《Javascript权威指南》读后感</header>
+                    <article class="blog-content">
+                        JavaScript权威指南并非初学者的入门宝典，就像一个小学生不可能去熟读字典一样。相对于《JavaScript高级程序设计》，这本书的确在阅读上有些难度，适合有一定经验的程序开发人员阅读
+                    </article>
+                    <footer class="blog-interaction">
+                        30个赞 &nbsp;&nbsp;&nbsp;&nbsp;<span class="fa fa-thumbs-o-up icon"></span>
+                    </footer>
+                </li>
+                <li>
+                    <span>加载更多博客</span>
+                </li>
+            </ul>
+            <aside class="friend-link">
+                <ul>
+                    <li><a href="#"><span>友情链接</span></a></li>
+                    <li><a href="#"><img src="Blog/images/friend1.jpg"/><span>毕向东</span></a></li>
+                    <li><a href="#"><img src="Blog/images/friend2.jpg"/><span>韩顺平</span></a></li>
+                    <li><a href="#"><img src="Blog/images/friend3.jpg"/><span>乔伊斯迈尔</span></a></li>
+                </ul>
+            </aside>
+        </section>
+        <script>
+            progress(1)
+        </script>
+    </div>
+</div>
+<script>
+    $('.intro li').on('mouseenter', function (event) {
+        var left = this.offsetLeft,
+                mouseX = event.clientX,
+                blockLeft = $('.intro')[0].offsetLeft,
+                mouseXOff = mouseX - blockLeft - 30,
+                rightAnimateOver = {'left': left + 30},
+                leftAnimateOver = {'left': left - 30},
+                $bottomLine = $('.bottom-line');
+
+        $bottomLine.stop(true);
+
+        if (left >= mouseXOff) {
+            $bottomLine.animate(rightAnimateOver, 300);
+        } else {
+            $bottomLine.stop(true).animate(leftAnimateOver, 300);
+        }
+
+        $bottomLine.animate({'left': left}, 200);
+    });
+
+    $('.sidebar li').click(function () {
+        $('.sidebar li').removeClass('active');
+        $(this).addClass('active');
+    });
+</script>
+</body>
+</html>

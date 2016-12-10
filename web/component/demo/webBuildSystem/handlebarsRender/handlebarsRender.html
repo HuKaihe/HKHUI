@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>handlebars渲染器</title>
+    <script src="../../../static/jquery-1.12.0.min.js"></script>
+    <script src="../../../static/HKHUI.js"></script>
+    <link rel="stylesheet" href="../../../static/HKHUI.css">
+    <script src="../../../../thirdParty/handlebars-v4.0.5.js"></script>
+</head>
+<body>
+<script type="text/x-template" id="tem">
+    <table>
+        <thead>
+        <tr>
+            <th>studentId</th>
+            <th>StudentName</th>
+            <th>StudentAge</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each students}}
+        <tr>
+            <td>{{studentId}}</td>
+            <td>{{studentName}}</td>
+            <td>{{studentAge}}</td>
+        </tr>
+        </tbody>
+        {{/each}}
+    </table>
+</script>
+<div class="container">
+
+</div>
+<script>
+    HKHUI.renderByHandleBar($("#tem")[0].text, $(".container"), {
+        students: [{studentId: 100100, studentName: 'Jack', studentAge: 15}, {
+            studentId: 100100,
+            studentName: 'Jack',
+            studentAge: 15
+        }, {studentId: 100100, studentName: 'Jack', studentAge: 15}]
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HKHUI</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="Version 1.0/HKHUI.css">
+    <link rel="stylesheet" href="thirdParty/css/font-awesome.min.css">
+    <script src="Version 1.0/jquery-1.12.0.min.js"></script>
+    <script src="Version 1.0/HKHUI.js"></script>
+</head>
+<body>
+<header class="hu-navigation">
+    <div class="hu-navigation-fixed">
+        <span class="hu-logo-title font-logo">
+            <i class="fa fa-header"></i>
+            K
+            <i class="fa fa-header"></i>
+            <i class="fa fa-magnet fa-spin"></i>
+            <i class="fa fa-italic"></i>
+        </span>
+        <ul class="hu-top-menu">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">精致页面组件</a></li>
+            <li><a href="#">可扩展的后台管理系统</a></li>
+            <li><a href="#">JavaScript常见功能</a></li>
+            <li><a href="#">联系我们</a></li>
+        </ul>
+    </div>
+</header>
+<!--hu-carousel的大小默认和它父容器的大小一致，所以必须要为父容器定义一个适当的高度和宽度-->
+<div style="height: 82%;min-height: 500px">
+    <div class="hu-carousel">
+        <ul class="hu-scroll-picture-list">
+            <li><img src="images/scroll-pic1.png"/></li>
+            <li><img src="images/scroll-pic2.png"/></li>
+            <li><img src="images/scroll-pic3.png"/></li>
+        </ul>
+    </div>
+</div>
+<div class="welcome-area">
+    <p class="welcome-slogan">HKHUI<span style="margin-left: 10px" class="e-icon fa fa-h-square"></span>让WEB开发变得随性，自然
+    </p>
+    <p>新一代web精致页面组件<span style="margin: 0 20px" class="e-icon">vs</span>jquery融入web开发常用的函数</p>
+</div>
+<div class="quickStartBlock">
+    <pre class="code">
+    <div class="hu-box hu-box-sm">
+        <img src="images/box-pic2.png" height="194" width="278" class="hu-box-picture"/>
+        <div class="hu-box-name">祷告</div>
+        <div class="hu-box-hover-cover">
+            <p>体验祷告带给我们的力量</p>
+        </div>
+    </div>
+    </pre>
+    <div class="example">
+        <div class="hu-box hu-box-sm">
+            <img src="images/box-pic2.png" height="194" width="278" class="hu-box-picture"/>
+            <div class="hu-box-name">祷告</div>
+            <div class="hu-box-hover-cover">
+                <p>体验祷告带给我们的力量</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(".hu-carousel").carousel({time: 4000, fadeTime: 1000});
+    </script>
+</body>
+</html>

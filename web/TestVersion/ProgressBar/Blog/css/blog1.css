@@ -1,0 +1,219 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: flex-start;
+  background-color: #CEC9C6;
+  font-family: "Microsoft YaHei";
+}
+.col-flex-container {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: flex-start;
+}
+.row-flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.nav-item {
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+.header {
+  height: 100px;
+  line-height: 130px;
+  text-align: center;
+}
+.header .icon {
+  font-size: 75px;
+  color: #3086C2;
+}
+.top-block {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 1080px;
+  height: 350px;
+  margin: 0 auto;
+}
+.top-block img:first-child {
+  width: 300px;
+}
+.top-block img:last-child {
+  width: 780px;
+}
+.main {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 1080px;
+  margin: 0 auto;
+}
+.main .menu .sidebar {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: flex-start;
+  width: 180px;
+  background-color: #22282C;
+}
+.main .menu .sidebar li {
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  height: 75px;
+  line-height: 75px;
+  border-bottom: 1px solid #353A3E;
+  font-size: 12px;
+}
+.main .menu .sidebar li:hover {
+  background-color: #3086C2;
+}
+.main .menu .sidebar li.active {
+  background-color: #3086C2;
+}
+.main .menu .sidebar li a {
+  color: #D5E5F1;
+}
+.main .primary {
+  background-color: white;
+  display: flex;
+  flex-flow: column wrap;
+  align-content: flex-start;
+  width: 900px;
+}
+.main .primary .intro {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  justify-content: space-around;
+}
+.main .primary .intro li {
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  line-height: 30px;
+  color: #7E7E7E;
+}
+.main .primary .intro li span {
+  display: block;
+  color: #3086C2;
+  text-align: center;
+}
+.main .primary .intro li:first-child span {
+  font-size: 30px;
+  line-height: 50px;
+}
+.main .primary .intro li.bottom-line {
+  position: absolute;
+  top: 85px;
+  left: 225px;
+  height: 3px;
+  width: 100px;
+  padding: 0;
+  background-color: #3086C2;
+}
+.main .primary .blog-pic-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.main .primary .blog-pic-list li img {
+  width: 300px;
+  height: 180px;
+}
+.main .primary .blog-section {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.main .primary .blog-section .blog-list {
+  width: 750px;
+  padding: 15px;
+}
+.main .primary .blog-section .blog-list li {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: flex-start;
+  padding: 20px 0;
+  border-top: 1px dashed #b6b6b6;
+  min-height: 200px;
+}
+.main .primary .blog-section .blog-list li:first-child {
+  border-top: none;
+}
+.main .primary .blog-section .blog-list li:last-child {
+  min-height: 10px;
+  color: #3086C2;
+  text-decoration: underline;
+  text-align: center;
+  cursor: pointer;
+}
+.main .primary .blog-section .blog-list li header,
+.main .primary .blog-section .blog-list li article,
+.main .primary .blog-section .blog-list li footer {
+  padding: 15px;
+}
+.main .primary .blog-section .blog-list li .blog-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+.main .primary .blog-section .blog-list li .blog-content {
+  font-size: 13px;
+  width: 750px;
+  min-height: 130px;
+  line-height: 20px;
+}
+.main .primary .blog-section .blog-list li .blog-interaction {
+  height: 25px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  justify-content: flex-end;
+  font-size: 12px;
+}
+.main .primary .blog-section .blog-list li .blog-interaction .icon {
+  color: #3086C2;
+  cursor: pointer;
+}
+.main .primary .blog-section .blog-list li .blog-interaction .icon:hover {
+  font-size: 15px;
+}
+.main .primary .blog-section .friend-link {
+  width: 135px;
+  display: flex;
+  flex-flow: column wrap;
+  align-content: flex-start;
+}
+.main .primary .blog-section .friend-link li {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: flex-start;
+  border-bottom: 1px solid #b6b6b6;
+  height: 120px;
+}
+.main .primary .blog-section .friend-link li a {
+  margin: auto;
+}
+.main .primary .blog-section .friend-link li:first-child {
+  height: 40px;
+  line-height: 40px;
+}
+.main .primary .blog-section .friend-link li span {
+  font-size: 12px;
+  display: block;
+  text-align: center;
+  margin-top: 5px;
+}
+.main .primary .blog-section .friend-link li img {
+  width: 76px;
+  height: 76px;
+  border-radius: 38px;
+}

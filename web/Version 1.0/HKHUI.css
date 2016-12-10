@@ -1,50 +1,117 @@
-*{
+/******************************************/
+/**************协调元素默认样式*************/
+/******************************************/
+html, body, div, span, object, iframe, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, menu, nav, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    line-height: 1;
     box-sizing: border-box;
     font-family: "Microsoft YaHei";
 }
-ul{
-    list-style: none;
-    padding: 0;
-    margin: 0;
+
+:focus {
+    outline: 1px;
 }
-.hu-container{
+
+article, aside, canvas, details, figcaption, figure,
+footer, header, menu, nav, section, summary {
+    display: block;
+}
+
+nav ul, ul li {
+    list-style: none;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    background: transparent;
+    text-decoration: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #cccccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+input, select {
+    outline: none;
+    vertical-align: middle;
+}
+
+  /******************************************/
+ /*******************容器*******************/
+/******************************************/
+.hu-container {
     width: 1080px;
     margin: 0 auto;
 }
+  /******************************************/
+ /*******************盒子*******************/
+/******************************************/
 .hu-box {
     position: relative;
     display: inline-block;
     overflow: hidden;
     width: 225px;
     height: 160px;
-    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.1);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
     cursor: pointer;
 }
-.hu-box.hu-box-sm{
+
+.hu-box.hu-box-sm {
     width: 200px;
     height: 135px;
 }
+
 .hu-box .hu-box-picture {
     display: inline-block;
     width: 100%;
     height: 80%;
 }
+
 .hu-box .hu-box-name {
     position: absolute;
     z-index: 2000;
     bottom: 0;
     overflow: hidden;
     width: 100%;
-    height:20%;
+    height: 20%;
     padding: 5px;
     font-size: 15px;
     text-align: center;
     background-color: #FFFFFF;
     color: #07111b;
 }
-.hu-box-bg-deep .hu-box-name{
+
+.hu-box-bg-deep .hu-box-name {
     color: #fff;
 }
+
 .hu-box .hu-box-hover-cover {
     position: absolute;
     top: 160px;
@@ -57,60 +124,76 @@ ul{
     background-color: #FFFFFF;
     opacity: 0.9;
 }
+
 .hu-box .hu-box-hover-cover p {
     font-size: 14px;
     color: #07111b;
 }
-.hu-box-bg-deep .hu-box-hover-cover p{
+
+.hu-box-bg-deep .hu-box-hover-cover p {
     color: #fff;
 }
+
 .hu-box .animate-show-hover-cover {
     animation: show-hover-cover 0.5s forwards;
 }
+
 @keyframes show-hover-cover {
     to {
         top: 20px;
     }
 }
-.hu-carousel,.hu-carousel .hu-scroll-picture-list{
+  /******************************************/
+ /*****************轮播图*******************/
+/******************************************/
+.hu-carousel, .hu-carousel .hu-scroll-picture-list {
     position: relative;
 }
-.hu-carousel .hu-scroll-picture-list>li{
+
+.hu-carousel .hu-scroll-picture-list > li {
     position: absolute;
-    top:0;
+    top: 0;
     left: 0;
     display: none;
     cursor: pointer;
 }
-.hu-carousel .hu-scroll-picture-list>li:first-child{
+
+.hu-carousel .hu-scroll-picture-list > li:first-child {
     display: block;
 }
-.hu-scroll-controls{
+
+.hu-scroll-controls {
     position: absolute;
     bottom: 10px;
     width: 100%;
     text-align: center;
 }
-.hu-scroll-controls>li{
+
+.hu-scroll-controls > li {
     display: inline-block;
     width: 20px;
     height: 20px;
     margin-right: 10px;
-    border:2px solid #F1F1F1;
+    border: 2px solid #F1F1F1;
     border-radius: 10px;
     cursor: pointer;
 }
-.hu-scroll-controls li.hu-control-active{
+
+.hu-scroll-controls li.hu-control-active {
     background-color: #F1F1F1;
 }
+
 .hu-carousel,
 .hu-carousel .hu-scroll-picture-list,
-.hu-carousel .hu-scroll-picture-list>li,
-.hu-carousel .hu-scroll-picture-list>li>img
-{
+.hu-carousel .hu-scroll-picture-list > li,
+.hu-carousel .hu-scroll-picture-list > li > img {
     height: 100%;
     width: 100%;
 }
+
+  /******************************************/
+ /*****************导航栏*******************/
+/******************************************/
 .hu-navigation {
     position: fixed;
     top: 0;
@@ -123,52 +206,73 @@ ul{
 .hu-navigation .hu-navigation-fixed {
     width: 1080px;
     height: 45px;
+    line-height: 45px;
     margin: 0 auto;
-    padding: 3px 0;
 }
 
 .hu-navigation .hu-navigation-fixed .hu-logo-title {
-    display: inline-block;
-    vertical-align: middle;
+    float: left;
+}
+
+.hu-navigation .hu-navigation-fixed .hu-logo-title.img-logo {
     width: 110px;
-    height: 38px;
+    height: 40px;
+}
+
+.hu-navigation .hu-navigation-fixed .hu-logo-title.font-logo {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0 20px;
+    background-color: dimgray;
 }
 
 .hu-navigation .hu-navigation-fixed .hu-top-menu {
-    display: inline-block;
-    vertical-align: middle;
-    width: 915px;
+    float: right;
+    height: 100%;
+    width: 860px;
     margin-left: 50px;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .hu-navigation .hu-navigation-fixed .hu-top-menu li {
-    display: inline-block;
-    padding: 10px;
-    margin: 0 12px;
+    float: left;
+    height: 100%;
+    padding: 0 10px;
+    margin: 0 10px;
 }
 
-.hu-navigation .hu-navigation-fixed .hu-top-menu li a{
+.hu-navigation .hu-navigation-fixed .hu-top-menu li a {
     color: #b8b8b8;
+    text-decoration: none;
+}
+
+.hu-navigation .hu-navigation-fixed .hu-top-menu li:hover{
+    background-color: dimgray;
 }
 
 .hu-navigation .hu-navigation-fixed .hu-top-menu li:last-child {
     float: right;
     margin: 0;
-    padding: 10px 0;
 }
+  /******************************************/
+ /*****************卡片*********************/
+/******************************************/
 .hu-card {
     margin-top: 40px;
     border-bottom: 1px dashed #CACACA;
 }
+
 .hu-card .hu-card-title {
     padding-bottom: 5px;
     font-size: 18px;
     color: #656565;
 }
-.hu-card .hu-card-content{
+
+.hu-card .hu-card-content {
     overflow: hidden; /*用于清除浮动*/
 }
+
 .hu-card .hu-card-content .hu-card-text {
     float: left;
     overflow: hidden;
@@ -179,9 +283,12 @@ ul{
     font-size: 14px;
     color: #bebebe;
 }
+
 .hu-card .hu-card-content .hu-card-text-overspread {
-    width: 100%;  !important;
+    width: 100%;
+!important;
 }
+
 .hu-card .hu-card-content .hu-card-img {
     float: right;
     width: 25%;
@@ -189,21 +296,28 @@ ul{
     margin-top: 10px;
     border-radius: 5px;
 }
+
 .hu-card .hu-card-interaction {
     margin-bottom: 25px;
     color: #CACACA;
     font-size: 13px;
 }
+
 .hu-card .hu-card-interaction span {
     color: #ADC4E2
 }
-.hu-card .hu-card-content,.hu-card .hu-card-interaction{
+
+.hu-card .hu-card-content, .hu-card .hu-card-interaction {
     margin-bottom: 25px;
 }
+
 .hu-card .hu-card-interaction .hu-card-like, .hu-card .hu-card-interaction .hu-card-comment {
     display: inline;
     margin-right: 5px;
 }
+  /******************************************/
+ /*****************标签*********************/
+/******************************************/
 .hu-tag {
     display: inline-block;
     height: 30px;

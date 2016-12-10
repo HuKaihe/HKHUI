@@ -1,0 +1,179 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-flow: column wrap;
+    background-color: #CEC9C6;
+    font-family: "Microsoft YaHei";
+}
+.logo-header{
+    height: 100px;
+    text-align: center;
+    padding-top:10px;
+}
+.logo-header span{
+    font-size: 75px;
+    color: #3086C2;
+}
+.header{
+    width: 1080px;
+    height: 350px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-content: stretch;
+}
+.header .master-pic{
+    width: 300px;
+}
+.header .head-pic{
+    width: 780px;
+}
+.container{
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-between;
+    width: 1080px;
+    margin: 0 auto;
+}
+.sidebar{
+    display: flex;
+    flex-flow: column wrap;
+    width: 180px;
+    background-color: #22282C;
+}
+.sidebar li{
+    height: 75px;
+    text-align: center;
+    line-height: 75px;
+    border-bottom: 1px solid #353A3E;
+    font-weight: bold;
+    cursor: pointer;
+}
+.sidebar li a {
+    font-size: 12px;
+    color: #D5E5F1;
+}
+.sidebar li.active{
+    background-color: #3086C2;
+}
+.sidebar li:hover{
+    background-color: #3086C2;
+}
+.main-primary{
+    /*width: 900px;*/
+    flex: auto;
+    background-color: white;
+}
+.introduction{
+    position: relative;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+}
+.introduction li{
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    line-height: 30px;
+    color: #7E7E7E;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+.introduction li span{
+    display: block;
+    color: #3086C2;
+    text-align: center;
+}
+
+.introduction li span.icon{
+    margin-top: 10px;
+    font-size: 30px;
+    align-self: center;
+}
+.introduction .bottom-line{
+    position: absolute;
+    top: 85px;
+    left: 225px;
+    height: 3px;
+    width: 100px;
+    padding: 0;
+    background-color: #3086C2;
+}
+.hot-blog-list{
+    display: flex;
+    flex-wrap: wrap;
+    height: 180px;
+    justify-content: space-between;
+    align-content: stretch;
+}
+.hot-blog-list li img{
+    width: 300px;
+    height: 180px;
+}
+.main-primary-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-start;
+}
+.blog-list{
+    flex: auto;
+    /*width: 750px;*/
+    padding: 15px;
+}
+.blog-list li{
+    padding: 20px 0;
+    display: flex;
+    flex-flow: column wrap;
+    border-bottom: 1px dashed #b6b6b6;
+    min-height: 200px;
+}
+.blog-list li .blog-title{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px;
+}
+.blog-list li .blog-content{
+    font-size: 13px;
+    padding: 15px;
+    width: 750px;
+    min-height: 130px;
+    line-height: 20px;
+}
+.blog-list li .blog-interaction{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 12px;
+    padding: 15px;
+}
+.friendLink{
+    width: 135px;
+    display: flex;
+    flex-flow: column wrap;
+}
+.friendLink li{
+    border-bottom: 1px solid #b6b6b6;
+    height: 120px;
+    display: flex;
+}
+.friendLink li:first-child{
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+.friendLink li a{
+    margin: auto;
+}
+.friendLink span{
+    font-size: 12px;
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+}
+.friendLink li img{
+    width: 76px;
+    height: 76px;
+    border-radius: 38px;
+}
